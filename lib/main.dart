@@ -19,6 +19,16 @@ class MyApp extends StatelessWidget {
       supportedLocales: const [
         Locale('fa'),
       ],
+      theme: ThemeData(
+        textTheme: const TextTheme(
+          headline1: TextStyle(
+            fontFamily: "dana",
+            fontSize: 18,
+            fontWeight: FontWeight.w900,
+            color: Colors.black
+          )
+        )
+      ),
       debugShowCheckedModeBanner: false,
       home: SplashScrean(),
     );

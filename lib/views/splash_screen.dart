@@ -3,6 +3,8 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_application_1/gen/assets.gen.dart';
+import 'package:flutter_application_1/myColors.dart';
+import 'package:flutter_application_1/myString.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 import 'home_view.dart';
@@ -41,7 +43,7 @@ class _SplashScreanState extends State<SplashScrean> {
               )),
             ),
           ),
-          SpinKitFadingCircle(
+          const SpinKitFadingCircle(
             color: Colors.white,
             size: 50.0,
           ),
@@ -57,14 +59,13 @@ class _SplashScreanState extends State<SplashScrean> {
                     borderRadius: BorderRadius.only(
                         topRight: Radius.circular(20),
                         topLeft: Radius.circular(20)),
-                    gradient: LinearGradient(colors: [
-                      Color.fromARGB(150, 17, 66, 212),
-                      Color.fromARGB(255, 115, 145, 213)
-                    ])),
-                child: Center(
+                    gradient: LinearGradient(
+                        colors: MyGradianCOlors.splashNavigationColor)),
+                child:Center(
                     child: Text(
-                  "ساخته شده توسط فاطمه عباسی",
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+                  MyString.textSplashScreean,
+
+                  style:Theme.of(context).textTheme.headline1,
                 )),
               ),
             ),
