@@ -12,16 +12,15 @@ class DetailView extends StatelessWidget{
     
     );
     
-    
 
   @override
   Widget build(BuildContext context) {
     
     print("${index} mahdi");
 
-    return const SafeArea(child: Scaffold(
+    return  SafeArea(child: Scaffold(
       
-      body: Text("index"),));
+      body: Text(index.toString())));
   }
 
 
