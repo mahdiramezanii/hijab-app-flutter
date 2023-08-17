@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Models/models.dart';
 import 'package:flutter_application_1/gen/assets.gen.dart';
-import 'package:flutter_application_1/views/detail_view.dart';
+import 'package:flutter_application_1/views/list_view.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
                     onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (BuildContext context) {
-                        return DetailView(
+                        return ListArticleView(
                           index: index,
                         );
                       }));
@@ -84,26 +84,7 @@ class _HomePageState extends State<HomePage> {
                 );
               }),
 
-          // Positioned(
-          //   bottom: 0,
-          //   left: 10,
-          //   right: 10,
-          //   child: Container(
-
-          //         height: MediaQuery.of(context).size.height/8,
-          //         decoration: const BoxDecoration(
-          //           borderRadius: BorderRadius.only(topRight: Radius.circular(30),topLeft: Radius.circular(30)),
-          //           gradient: LinearGradient(colors:[
-          //                 Color.fromARGB(255, 10, 143, 226),
-          //                 Color.fromARGB(255, 180, 20, 55),
-          //                 Color.fromARGB(255, 10, 143, 226),
-          //               ],
-          //               begin: Alignment.bottomRight,
-          //               end: Alignment.bottomLeft)
-          //         ),
-
-          //   ),
-          // )
+          
         ],
       ),
     );

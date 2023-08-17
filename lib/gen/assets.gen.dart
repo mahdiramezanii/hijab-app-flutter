@@ -15,6 +15,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/flowers.png
   AssetGenImage get flowers => const AssetGenImage('assets/images/flowers.png');
 
+  /// File path: assets/images/hijab.jpeg
+  AssetGenImage get hijab => const AssetGenImage('assets/images/hijab.jpeg');
+
   /// File path: assets/images/homebg.jpg
   AssetGenImage get homebg => const AssetGenImage('assets/images/homebg.jpg');
 
@@ -23,7 +26,7 @@ class $AssetsImagesGen {
       const AssetGenImage('assets/images/splash-image.jpg');
 
   /// List of all assets
-  List<AssetGenImage> get values => [flowers, homebg, splashImage];
+  List<AssetGenImage> get values => [flowers, hijab, homebg, splashImage];
 }
 
 class Assets {
