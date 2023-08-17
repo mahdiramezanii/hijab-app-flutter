@@ -15,7 +15,6 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-    
       body: Stack(
         children: [
           Container(
@@ -37,12 +36,14 @@ class _HomePageState extends State<HomePage> {
               itemCount: HomeViewData.length,
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
-                  padding: const EdgeInsets.fromLTRB(25, 70, 25, 3),
+                  padding:  EdgeInsets.fromLTRB(25,index==0?50:20, 25, 3),
                   child: InkWell(
-                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
-
-                        return  DetailView(index: index,);
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (BuildContext context) {
+                        return DetailView(
+                          index: index,
+                        );
                       }));
                     },
                     child: Container(
@@ -83,29 +84,28 @@ class _HomePageState extends State<HomePage> {
                 );
               }),
 
-              // Positioned(
-              //   bottom: 0,
-              //   left: 10,
-              //   right: 10,
-              //   child: Container(
-                      
-              //         height: MediaQuery.of(context).size.height/8,
-              //         decoration: const BoxDecoration(
-              //           borderRadius: BorderRadius.only(topRight: Radius.circular(30),topLeft: Radius.circular(30)),
-              //           gradient: LinearGradient(colors:[
-              //                 Color.fromARGB(255, 10, 143, 226),
-              //                 Color.fromARGB(255, 180, 20, 55),
-              //                 Color.fromARGB(255, 10, 143, 226),
-              //               ],
-              //               begin: Alignment.bottomRight,
-              //               end: Alignment.bottomLeft)
-              //         ),
-              
-              //   ),
-              // )
+          // Positioned(
+          //   bottom: 0,
+          //   left: 10,
+          //   right: 10,
+          //   child: Container(
+
+          //         height: MediaQuery.of(context).size.height/8,
+          //         decoration: const BoxDecoration(
+          //           borderRadius: BorderRadius.only(topRight: Radius.circular(30),topLeft: Radius.circular(30)),
+          //           gradient: LinearGradient(colors:[
+          //                 Color.fromARGB(255, 10, 143, 226),
+          //                 Color.fromARGB(255, 180, 20, 55),
+          //                 Color.fromARGB(255, 10, 143, 226),
+          //               ],
+          //               begin: Alignment.bottomRight,
+          //               end: Alignment.bottomLeft)
+          //         ),
+
+          //   ),
+          // )
         ],
       ),
-     
     );
   }
 }
