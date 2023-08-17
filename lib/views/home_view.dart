@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Models/models.dart';
 import 'package:flutter_application_1/gen/assets.gen.dart';
+import 'package:flutter_application_1/views/detail_view.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -39,7 +40,10 @@ class _HomePageState extends State<HomePage> {
                   padding: const EdgeInsets.fromLTRB(25, 70, 25, 3),
                   child: InkWell(
                     onTap: (){
-                      print(index);
+                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
+
+                        return DetailView();
+                      }));
                     },
                     child: Container(
                       height: MediaQuery.of(context).size.height / 18,
