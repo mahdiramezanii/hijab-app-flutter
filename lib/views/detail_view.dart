@@ -40,14 +40,14 @@ class DetailView extends StatelessWidget {
                 SizedBox(
                     height: MediaQuery.of(context).size.height / 3,
                     child: Image(image: AssetImage(listVeiws[index].image!))),
-                    Container(
-                      height: 200,
-                      width: 300,
-                      decoration: BoxDecoration(
-                        color: Colors.amber
-                      ),
-                      child: SingleChildScrollView(child: Text(listVeiws[index].text!)),
-                    )
+                Container(
+                  height: 200,
+                  width: 300,
+                  decoration: BoxDecoration(color: Colors.amber),
+                  child: SingleChildScrollView(
+                      child: Text(listVeiws[index].text!,
+                      style: Theme.of(context).textTheme.headlineLarge,)),
+                )
               ],
             ),
           ),
