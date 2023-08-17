@@ -44,7 +44,7 @@ class _ListArticleViewState extends State<ListArticleView> {
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (BuildContext context) {
-                      return DetailView(index: value);
+                      return DetailView(index: value, listVeiws: data[widget.index],);
                     }));
                   },
                   child: Container(
@@ -54,11 +54,7 @@ class _ListArticleViewState extends State<ListArticleView> {
                         borderRadius:
                             const BorderRadius.all(Radius.circular(10)),
                         color: Color.fromARGB(255, 140, 198, 213)
-                        // gradient: LinearGradient(colors: [
-                        //   const Color.fromRGBO(10, 182, 246, 1),
-                        //   Color.fromARGB(97, 255, 255, 255),
-                        //   const Color.fromRGBO(10, 182, 246, 1),
-                        // ], begin: Alignment.bottomRight, end: Alignment.bottomLeft)
+                       
                         ),
                     child: Row(
                       children: [
