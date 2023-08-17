@@ -15,6 +15,16 @@ List<HomeViewList> HomeViewData=[
   HomeViewList(name: "حجاب زن"),
   HomeViewList(name: "وصیت امیرالمومنین"),
   HomeViewList(name: "اشعار و سخن شهدا"),
+   HomeViewList(name: "چهل حدیث"),
+  HomeViewList(name: "پوشیده و محفوظ داشتن"),
+  HomeViewList(name: "حجاب زن"),
+  HomeViewList(name: "وصیت امیرالمومنین"),
+  HomeViewList(name: "اشعار و سخن شهدا"),
+   HomeViewList(name: "چهل حدیث"),
+  HomeViewList(name: "پوشیده و محفوظ داشتن"),
+  HomeViewList(name: "حجاب زن"),
+  HomeViewList(name: "وصیت امیرالمومنین"),
+  HomeViewList(name: "اشعار و سخن شهدا"),
   
 ];
 

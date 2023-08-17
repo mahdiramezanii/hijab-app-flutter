@@ -12,4 +12,6 @@ class MyGradianCOlors{
   static const List<Color> splashNavigationColor=[
       Colors.blue,Color.fromARGB(255, 48, 65, 61)
   ];
+
+  static const List<Color> HomeListViewBody=[];
 }
