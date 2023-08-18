@@ -32,6 +32,12 @@ class MyApp extends StatelessWidget {
             fontSize: 20,
             fontWeight: FontWeight.w900,
             color: Colors.white,
+          ),
+          bodyText1: TextStyle(
+            fontFamily: "dana",
+            fontSize: 16,
+            fontWeight: FontWeight.w300,
+            color: Colors.white
           )
         )
       ),

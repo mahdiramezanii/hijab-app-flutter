@@ -14,9 +14,7 @@ class DetailView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(index);
-    print(listVeiws);
-
+   
     return SafeArea(
         child: Scaffold(
       body: Stack(children: [
@@ -41,12 +39,12 @@ class DetailView extends StatelessWidget {
                     height: MediaQuery.of(context).size.height / 3,
                     child: Image(image: AssetImage(listVeiws[index].image!))),
                 Container(
-                  height: 200,
-                  width: 300,
-                  decoration: BoxDecoration(color: Colors.amber),
+                  height: MediaQuery.of(context).size.height/2,
+                  width: MediaQuery.of(context).size.width/1.2,
+                  decoration: BoxDecoration(color: Color.fromARGB(255, 0, 0, 0)),
                   child: SingleChildScrollView(
                       child: Text(listVeiws[index].text!,
-                      style: Theme.of(context).textTheme.headlineLarge,)),
+                      style: Theme.of(context).textTheme.bodyText1,)),
                 )
               ],
             ),

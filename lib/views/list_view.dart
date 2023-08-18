@@ -20,6 +20,8 @@ class _ListArticleViewState extends State<ListArticleView> {
     
     List data = [
       hijabContant,
+      delNeveshteh,
+      Shohada
     ];
 
     return SafeArea(
