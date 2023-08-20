@@ -22,26 +22,31 @@ class DetailView extends StatelessWidget {
           height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage(Assets.images.homebg.path),
+                  image: AssetImage(Assets.images.main.path),
                   fit: BoxFit.fill)),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 50),
+          padding: const EdgeInsets.only(top: 170),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   listVeiws[index].title!,
-                  style: Theme.of(context).textTheme.headline2,
+                  style: Theme.of(context).textTheme.headline3,
                 ),
-                SizedBox(
-                    height: MediaQuery.of(context).size.height / 3,
-                    child: Image(image: AssetImage(listVeiws[index].image!))),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(10,20,10,20),
+                  child: SizedBox(
+                    
+                      height: MediaQuery.of(context).size.height / 5,
+                      width: MediaQuery.of(context).size.height / 3,
+                      child: Image(image: AssetImage(listVeiws[index].image!),fit: BoxFit.fill,)),
+                ),
                 Container(
-                  height: MediaQuery.of(context).size.height/2,
+                  height: MediaQuery.of(context).size.height/3,
                   width: MediaQuery.of(context).size.width/1.2,
-                  decoration: BoxDecoration(color: Color.fromARGB(255, 0, 0, 0)),
+                  decoration: BoxDecoration(color: Colors.transparent),
                   child: SingleChildScrollView(
                       child: Text(listVeiws[index].text!,
                       style: Theme.of(context).textTheme.bodyText1,)),

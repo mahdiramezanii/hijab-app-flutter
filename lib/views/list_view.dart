@@ -17,12 +17,7 @@ class ListArticleView extends StatefulWidget {
 class _ListArticleViewState extends State<ListArticleView> {
   @override
   Widget build(BuildContext context) {
-    
-    List data = [
-      hijabContant,
-      delNeveshteh,
-      Shohada
-    ];
+    List data = [hijabContant, delNeveshteh, Shohada,eslam];
 
     return SafeArea(
         child: Scaffold(
@@ -33,47 +28,75 @@ class _ListArticleViewState extends State<ListArticleView> {
           height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage(Assets.images.homebg.path),
+                  image: AssetImage("assets/images/main.jpg"),
                   fit: BoxFit.fill)),
         ),
         //ListView
-        ListView.builder(
-            itemCount: data[widget.index].length,
-            itemBuilder: (BuildContext context, int value) {
-              return Padding(
-                padding: EdgeInsets.fromLTRB(25, 75, 25, 0),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (BuildContext context) {
-                      return DetailView(index: value, listVeiws: data[widget.index],);
-                    }));
-                  },
-                  child: Container(
-                    height: MediaQuery.of(context).size.height / 14,
-                    width: MediaQuery.of(context).size.width / 24,
-                    decoration: const BoxDecoration(
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(10)),
-                        color: Color.fromARGB(255, 140, 198, 213)
-                       
-                        ),
-                    child: Row(
+        Positioned(
+          top: MediaQuery.of(context).size.height / 4.1,
+          left: MediaQuery.of(context).size.width / 13,
+          right: MediaQuery.of(context).size.width / 13,
+          child: Container(
+            height: MediaQuery.of(context).size.height / 1.6,
+            child: ListView.builder(
+                itemCount: data[widget.index].length,
+                itemBuilder: (BuildContext context, int value) {
+                  return InkWell(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (BuildContext context) {
+                        return DetailView(
+                          index: value,
+                          listVeiws: data[widget.index],
+                        );
+                      }));
+                    },
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Image(image: AssetImage(Assets.images.hijab.path)),
-                        SizedBox(
-                          width: 5,
+                        Padding(
+                          padding: const EdgeInsets.only(top: 10),
+                          child: Container(
+                            height: MediaQuery.of(context).size.height / 14,
+                            decoration: const BoxDecoration(
+                                borderRadius:
+                                    const BorderRadius.all(Radius.circular(10)),
+                                color: Colors.transparent),
+                            child: Row(
+                              children: [
+                                Image(
+                                    image: AssetImage(data[widget.index][value].image!)),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Text(
+                                  data[widget.index][value].title!,
+                                  style: Theme.of(context).textTheme.headline1,
+                                )
+                              ],
+                            ),
+                          ),
                         ),
-                        Text(
-                          data[widget.index][value].title!,
-                          style: Theme.of(context).textTheme.headline1,
+                        if (value % 2 == 0)
+                        Divider(
+                          color: Color.fromARGB(255, 2, 2, 2),
+                          thickness: 0.6,
+                          indent: MediaQuery.of(context).size.width/2.7,
+                          endIndent: 0,
+                          
+                        )
+                        else Divider(
+                          color: Colors.black,
+                          indent: 0,
+                          thickness: 0.6,
+                          endIndent: MediaQuery.of(context).size.width/2.7,
                         )
                       ],
                     ),
-                  ),
-                ),
-              );
-            })
+                  );
+                }),
+          ),
+        )
       ],
     )));
   }
