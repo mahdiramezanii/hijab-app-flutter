@@ -32,7 +32,9 @@ class _HomePageState extends State<HomePage> {
                 style: Theme.of(context).textTheme.headline3,
               )),
           ListView.builder(
-              scrollDirection: Axis.vertical,
+            
+              physics: NeverScrollableScrollPhysics(),
+            
               itemCount: HomeViewData.length,
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
