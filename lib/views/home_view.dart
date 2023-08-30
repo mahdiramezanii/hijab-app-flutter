@@ -8,12 +8,13 @@ class HomePage extends StatefulWidget {
   @override
   State<HomePage> createState() => _HomePageState();
   var _selectedIndex;
+
 }
 
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    var size=MediaQuery.of(context).size;
     return Scaffold(
       body: Stack(
         children: [
@@ -38,8 +39,9 @@ class _HomePageState extends State<HomePage> {
               itemCount: HomeViewData.length,
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
-                  padding:  EdgeInsets.fromLTRB(25,index==0?360:20, 25, 50),
+                  padding:  EdgeInsets.fromLTRB(size.width/13,index==0?size.height/2.4:20, 25, 50),
                   child: InkWell(
+
                     onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (BuildContext context) {
@@ -48,6 +50,7 @@ class _HomePageState extends State<HomePage> {
                         );
                       }));
                     },
+                    
                     child: Container(
                       height: MediaQuery.of(context).size.height / 18,
                       width: MediaQuery.of(context).size.width / 24,

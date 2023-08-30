@@ -42,6 +42,7 @@ class _ListArticleViewState extends State<ListArticleView> {
                 itemCount: data[widget.index].length,
                 itemBuilder: (BuildContext context, int value) {
                   return InkWell(
+
                     onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (BuildContext context) {
@@ -51,6 +52,8 @@ class _ListArticleViewState extends State<ListArticleView> {
                         );
                       }));
                     },
+
+                    
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
