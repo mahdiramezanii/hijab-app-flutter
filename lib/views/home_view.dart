@@ -80,7 +80,7 @@ class _HomePageState extends State<HomePage> {
 
             Positioned(
               bottom: 10,
-              left: 10,
+              left: 0,
               child: Container(
                 height: 100,
                   width: 100,
@@ -92,6 +92,10 @@ class _HomePageState extends State<HomePage> {
                 style: ElevatedButton.styleFrom(
               elevation: 0.0,
               primary: Colors.red.withOpacity(0),
+              shape:RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(100),
+                side: BorderSide(color: Colors.white,)
+              )
   
                 ),
                 onPressed: (){
@@ -103,7 +107,7 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.transparent,
                     borderRadius: BorderRadius.circular(200)
                   ),
-                  child:Icon(Icons.movie,size: 50,),
+                  child:Icon(Icons.movie,size: 50,color: Colors.white,),
                 )),
               ),
             ),
