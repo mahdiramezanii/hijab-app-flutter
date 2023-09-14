@@ -70,17 +70,41 @@ class _HomePageState extends State<HomePage> {
                             HomeViewData[index].name!,
                             style: Theme.of(context).textTheme.headline2,
                           ),
-                          // ImageIcon(
-                          //   AssetImage(Assets.images.flowers.path),
-                          //   size: 45,
-                          //   color: Colors.white,
-                          // )
+                         
                         ],
                       ),
                     ),
                   ),
                 );
               }),
+
+            Positioned(
+              bottom: 10,
+              left: 10,
+              child: Container(
+                height: 100,
+                  width: 100,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10000000)
+                ),
+                child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  
+                  backgroundColor: Colors.transparent
+                ),
+                onPressed: (){
+                          
+                }, child: Container(
+                  height: 100,
+                  width: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.transparent,
+                    borderRadius: BorderRadius.circular(200)
+                  ),
+                  child:Icon(Icons.movie,size: 50,),
+                )),
+              ),
+            ),
 
           
         ],
