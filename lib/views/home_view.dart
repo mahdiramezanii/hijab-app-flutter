@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Models/models.dart';
 import 'package:flutter_application_1/gen/assets.gen.dart';
 import 'package:flutter_application_1/views/list_view.dart';
+import 'package:flutter_application_1/views/video_list.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -99,7 +100,10 @@ class _HomePageState extends State<HomePage> {
   
                 ),
                 onPressed: (){
-                          
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
+
+                    return VideoList(index: 1,);
+                  }));       
                 }, child: Container(
                   height: MediaQuery.of(context).size.height/10,
                   width: MediaQuery.of(context).size.width/5,
