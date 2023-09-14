@@ -80,10 +80,10 @@ class _HomePageState extends State<HomePage> {
 
             Positioned(
               bottom: 10,
-              left: 0,
+              left: 5,
               child: Container(
-                height: 100,
-                  width: 100,
+                height: MediaQuery.of(context).size.height/10,
+                  width: MediaQuery.of(context).size.width/5,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10000000)
                 ),
@@ -101,10 +101,10 @@ class _HomePageState extends State<HomePage> {
                 onPressed: (){
                           
                 }, child: Container(
-                  height: 100,
-                  width: 100,
+                  height: MediaQuery.of(context).size.height/10,
+                  width: MediaQuery.of(context).size.width/5,
                   decoration: BoxDecoration(
-                    color: Colors.transparent,
+                    color: Color.fromARGB(0, 16, 196, 127),
                     borderRadius: BorderRadius.circular(200)
                   ),
                   child:Icon(Icons.movie,size: 50,color: Colors.white,),
