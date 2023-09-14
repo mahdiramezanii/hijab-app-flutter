@@ -88,9 +88,11 @@ class _HomePageState extends State<HomePage> {
                   borderRadius: BorderRadius.circular(10000000)
                 ),
                 child: ElevatedButton(
+                
                 style: ElevatedButton.styleFrom(
-                  
-                  backgroundColor: Colors.transparent
+              elevation: 0.0,
+              primary: Colors.red.withOpacity(0),
+  
                 ),
                 onPressed: (){
                           
