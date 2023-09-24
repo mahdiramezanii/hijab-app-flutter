@@ -5,7 +5,6 @@ import 'package:flutter_application_1/gen/assets.gen.dart';
 import 'package:flutter_application_1/myColors.dart';
 import 'package:flutter_application_1/myString.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-
 import 'home_view.dart';
 
 class SplashScrean extends StatefulWidget {
