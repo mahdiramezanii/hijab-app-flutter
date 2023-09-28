@@ -3,7 +3,9 @@
 class MyString{
 
 
-  static const String textSplashScreean="ساخته شده توسط فاطمه عباسی";
+  static const String textSplashScreean="""ساخته شده توسط فاطمه عباسی
+  استاد سرکار خانم سمیه عسکرپور
+  دانشگاه فنی و حرفه ای""";
 }
 
 

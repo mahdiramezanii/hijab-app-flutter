@@ -28,9 +28,9 @@ class _HomePageState extends State<HomePage> {
           ),
           Positioned(
               top: MediaQuery.of(context).size.height / 6,
-              left: MediaQuery.of(context).size.width / 2.90,
+              left: MediaQuery.of(context).size.width / 2.70,
               child:  Text(
-                "حجاب و عفاف",
+                "سنگر عشق",
                 style: Theme.of(context).textTheme.headline3,
               )),
           ListView.builder(

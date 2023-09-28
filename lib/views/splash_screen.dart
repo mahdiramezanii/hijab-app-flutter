@@ -54,7 +54,7 @@ class _SplashScreanState extends State<SplashScrean> {
             left: 0,
             right: 0,
             child: SizedBox(
-              height: size.height / 12,
+              height: size.height / 10,
               child: Container(
                 height: size.height / 10,
                 decoration: const BoxDecoration(
